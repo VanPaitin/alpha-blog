@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, except: [:index, :new, :create]
+  before_action :set_article, except: [:home, :index, :new, :create]
   def index
     @articles = Article.all
   end
