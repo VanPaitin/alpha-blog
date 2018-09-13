@@ -1,0 +1,21 @@
+<% if object.errors.any? %>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <div class="card text-white bg-danger">
+        <div class="card-header">
+          <h3 class="card-title">
+            <%= pluralize(object.errors.count, 'error') %>
+            prevented the article from being created
+          </h3>
+          <div class="card-text">
+            <ol>
+              <% object.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
