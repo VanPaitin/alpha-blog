@@ -31,7 +31,7 @@
 }
 
 .jumbotron {
-  background-image: url(jumbotron-background.jpg);
+  background-image: asset-url('jumbotron-background.jpg');
   background-size: cover;
   height: 350px;
 
@@ -71,4 +71,29 @@ footer {
 
 form.new_article, form.edit_article {
   margin-top: 40px;
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.card-body {
+  margin-top: 30px;
+  background: #F7F7F7;
 }
