@@ -12,6 +12,16 @@
   }
 }
 
+.dropdown-item {
+  &:hover {
+    background: #EFEFEF;
+  }
+}
+
+.collapse.space-out {
+  justify-content: space-between;
+}
+
 #logo {
   float: left;
   font-size: 1.7em;
@@ -120,4 +130,8 @@ pre.debug_dump {
 ul.pagination {
   justify-content: center;
   margin-top: 30px;
+}
+
+label {
+  font-weight: bold;
 }
