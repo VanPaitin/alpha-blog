@@ -3,6 +3,10 @@ module ApplicationHelper
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
-    image_tag(gravatar_url, alt: user.username, class: "img-circle")
+    image_tag(gravatar_url, alt: user.username, class: "rounded-circle")
+  end
+
+  def paginate(collection:)
+    will_paginate collection, list_classes: %w(pagination justify-content-center), previous_label: '&larr; Previous', next_label: 'Next &rarr;'
   end
 end

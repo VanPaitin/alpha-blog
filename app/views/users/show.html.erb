@@ -7,4 +7,9 @@
 </div>
 
 <h4 align="center"><%= @user.username %>'s articles</h4>
-<%= render @user.articles %>
+
+<%= paginate collection: @user_articles %>
+
+<%= render @user_articles %>
+
+<%= paginate collection: @user_articles %>

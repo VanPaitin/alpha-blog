@@ -111,3 +111,13 @@ pre.debug_dump {
   border-radius: 8px;
   border: 1px solid #000000;
 }
+
+.listing {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.pagination {
+  justify-content: center;
+  margin-top: 30px;
+}
