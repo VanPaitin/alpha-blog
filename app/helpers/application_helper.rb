@@ -9,4 +9,8 @@ module ApplicationHelper
   def paginate(collection:)
     will_paginate collection, list_classes: %w(pagination justify-content-center), previous_label: '&larr; Previous', next_label: 'Next &rarr;'
   end
+
+  def admin_user?
+    current_user && current_user.admin?
+  end
 end
