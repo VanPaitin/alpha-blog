@@ -16,7 +16,7 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
       follow_redirect!
     end
     assert_template 'categories/index'
-    assert_match "sports", response.body
+    assert_match "Sports", response.body
   end
 
   test "invalid category submission results in failure" do

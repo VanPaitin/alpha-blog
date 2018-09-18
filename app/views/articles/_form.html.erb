@@ -5,7 +5,7 @@
     <%= f.label :title, class: "col-sm-2 col-form-label" %><br/>
 
     <div class="col-sm-8">
-      <%= f.text_field :title, class: 'form-control' %>
+      <%= f.text_field :title, class: 'form-control', placeholder: "Title of article", autofocus: true %>
     </div>
   </div>
 
@@ -13,7 +13,15 @@
     <%= f.label :description, class: "col-sm-2 col-form-label" %><br/>
 
     <div class="col-sm-8">
-      <%= f.text_area :description, class: 'form-control', rows: 10 %>
+      <%= f.text_area :description, class: 'form-control', rows: 10, placeholder: "Body of article" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-8 offset-sm-2">
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+        <% cb.label(class: "form-check-label") { cb.check_box(class: "form-check-input") + cb.text } %>
+      <% end %>
     </div>
   </div>
 

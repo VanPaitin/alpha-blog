@@ -5,7 +5,7 @@
         <div class="card-header">
           <h3 class="card-title">
             <%= pluralize(object.errors.count, 'error') %>
-            prevented the article from being created
+            prevented the <%= object.class.name.downcase %> from being created
           </h3>
           <div class="card-text">
             <ol>
