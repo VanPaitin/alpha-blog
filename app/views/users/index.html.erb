@@ -1,5 +1,9 @@
 <h1 align="center">All Alpha Bloggers</h1>
-
+<%= form_with method: :get, local: true do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag "Search", class: 'btn btn-primary' %>
+<% end %>
 <div align="center">
   <%= paginate collection: @users %>
 

@@ -12,4 +12,10 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 105 },
             uniqueness: { case_sensitive: false },
             format: { with: VALID_EMAIL_REGEX }
+
+  def self.search(query)
+    return self unless query
+
+    User.where('LOWER(username) LIKE ? OR email LIKE ?', "%#{query.downcase}%", "%#{query.downcase}%")
+  end
 end
